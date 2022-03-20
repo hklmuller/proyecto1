@@ -11,11 +11,11 @@ def plantilla(request):
     template = loader.get_template('plantilla.html')
 
     datos = {
-        'lista': ['primero', 'segundo', 'tercero']
+        'lista': ['primero', 'segundo', 'tercero'],
         'nombre': 'Leandro'
     }
 
 
-    plantilla_generada = template.render({})
+    plantilla_generada = template.render(datos)
 
     return HttpResponse('planilla_generada')    
