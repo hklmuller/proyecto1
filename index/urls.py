@@ -1,8 +1,8 @@
-from django.urls import path
-from .views import index, plantilla
+from django.contrib import admin
+from django.urls import path, include
 
-URLPattern = [
-    path('', index, name='index'),
-    path('plantilla/', plantilla, name='plantilla')
-
+urlpatterns = [
+    path('', include('index.urls')),
+    
+    path('admin/', admin.site.urls),
 ]
