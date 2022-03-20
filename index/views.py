@@ -12,7 +12,8 @@ def plantilla(request):
 
     datos = {
         'lista': ['primero', 'segundo', 'tercero'],
-        'nombre': 'Leandro'
+        'nombre': 'Leandro',
+        'apellido': 'Muller'
     }
 
 
