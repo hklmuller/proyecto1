@@ -29,5 +29,5 @@ def lista_licenciado(request):
         licenciado = Licenciado.objects.all()
         
     form = LicenciadoBusqueda()
-    return render(request, "profesiones/lista_licenciado.html", {'form': form, 'Licenciados': Licenciado})
+    return render(request, "profesiones/lista_licenciado.html", {'form': form, 'licenciado': licenciado})
     
