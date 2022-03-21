@@ -24,10 +24,10 @@ def lista_licenciado(request):
     nombre_a_buscar = request.GET.get('nombre', None)
     
     if nombre_a_buscar is not None:
-        licenciados = Licenciado.objects.filter(nombre__icontains=nombre_a_buscar)
+        licenciado = Licenciado.objects.filter(nombre__icontains=nombre_a_buscar)
     else:
-        licenciados = Licenciado.objects.all()
+        licenciado = Licenciado.objects.all()
         
     form = LicenciadoBusqueda()
-    return render(request, "profesiones/lista_licenciado.html", {'form': form, 'Licenciado': Licenciado})
+    return render(request, "profesiones/lista_licenciado.html", {'form': form, 'Licenciados': Licenciado})
     
